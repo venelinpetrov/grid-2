@@ -1,24 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
+import faker from 'faker';
 import './App.css';
+import { Grid, Column } from './components/Grid';
+
+const data = Array(50).fill(null).map((_, i) => ({
+  uuid: faker.datatype.uuid(),
+  firstName: faker.name.firstName(),
+  lastName: faker.name.lastName(),
+  city: faker.address.city(),
+  birthDate: faker.date.past().toDateString()
+}));
+
+const columns: Column[] = [
+  {
+    key: "uuid",
+    displayName: "ID",
+  },
+  {
+    key: "firstName",
+    displayName: "first name",
+  },
+  {
+    key: "lastName",
+    displayName: "last name",
+  },
+
+  {
+    key: "city",
+    displayName: "city",
+  },
+  {
+    key: "birthDate",
+    displayName: "birth date",
+  },
+];
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Grid data={data} columns={columns} dataKey="uuid"/>
     </div>
   );
 }
