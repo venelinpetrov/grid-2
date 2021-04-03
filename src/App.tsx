@@ -30,7 +30,7 @@ const columns: Column[] = [
 
 function App() {
   return (
-    <div className="App">
+    <div className="playground">
       <Grid data={data} columns={columns} dataKey="uuid"/>
     </div>
   );
