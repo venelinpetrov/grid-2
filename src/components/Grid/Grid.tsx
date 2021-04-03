@@ -27,7 +27,7 @@ export const Grid: React.FC<Props> = ({
       <tbody>
         {data.map(row => (
           <tr key={row[dataKey]}>
-            {columns.map(({ key }) => <td>{row[key]}</td>)}
+            {columns.map(({ key }) => <td key={key}>{row[key]}</td>)}
           </tr>
         ))}
       </tbody>

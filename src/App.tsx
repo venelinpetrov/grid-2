@@ -6,25 +6,25 @@ const data = getSampleData();
 
 const columns: Column[] = [
   {
-    key: "uuid",
-    displayName: "ID",
+    key: 'uuid',
+    displayName: 'ID',
   },
   {
-    key: "firstName",
-    displayName: "first name",
+    key: 'firstName',
+    displayName: 'first name',
   },
   {
-    key: "lastName",
-    displayName: "last name",
+    key: 'lastName',
+    displayName: 'last name',
   },
 
   {
-    key: "city",
-    displayName: "city",
+    key: 'city',
+    displayName: 'city',
   },
   {
-    key: "birthDate",
-    displayName: "birth date",
+    key: 'birthDate',
+    displayName: 'birth date',
   },
 ];
 
