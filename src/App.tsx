@@ -1,14 +1,8 @@
-import faker from 'faker';
 import './App.css';
 import { Grid, Column } from './components/Grid';
+import { getSampleData } from './helpers/generateSampleData';
 
-const data = Array(50).fill(null).map((_, i) => ({
-  uuid: faker.datatype.uuid(),
-  firstName: faker.name.firstName(),
-  lastName: faker.name.lastName(),
-  city: faker.address.city(),
-  birthDate: faker.date.past().toDateString()
-}));
+const data = getSampleData();
 
 const columns: Column[] = [
   {
